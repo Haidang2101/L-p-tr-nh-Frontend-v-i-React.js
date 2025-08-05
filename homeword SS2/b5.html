@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const phoneBooks = [];
+
+function addContact(name, phone, email) {
+  const contact = {
+    name,
+    phone,
+    email
+  };
+  phoneBooks.push(contact);
+}
+
+function displayContact() {
+  console.log("Danh bạ điện thoại:");
+  if (phoneBooks.length === 0) {
+    console.log("Danh bạ trống.");
+  } else {
+    phoneBooks.forEach((contact, index) => {
+      console.log(
+        `${index + 1}. Tên: ${contact.name}, SĐT: ${contact.phone}, Email: ${contact.email}`
+      );
+    });
+  }
+}
+
+addContact("Nguyễn Hải Đăng", "0909123456", "HaiDang@gmail.com");
+addContact("Trần Thị minh Huyền", "0911222333", "MinhHuyen@gmail.com");
+displayContact();
+
+
+</script>
+</html>
